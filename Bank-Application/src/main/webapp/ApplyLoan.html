@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loan Page</title>
+</head>
+<body>
+
+	<style>
+		body{
+			background-image: linear-gradient(to right, #03346E, #FAFFAF);
+			margin: 0;
+		}
+
+		h2{
+			text-align: center;
+			color:#071952;
+			font-size: 40px;
+			background-color: #FAFFAF;
+			margin: 0;
+		}
+
+		.loan-options a{
+			text-decoration: none;
+			color: black;
+			font-size: 23px;
+			font-weight: 700;
+			background-color: #071952;
+			color:rgb(255, 120, 0);
+			padding: 1rem;
+			border-radius: 15px;
+		}
+
+		.loan-options a:hover{
+			background-color: rgb(255, 120, 0);
+			color:#071952;
+			border: 2px solid #071952;
+		}
+		
+
+		.loan-options{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.loan{
+			display: flex;
+			justify-content: center;
+			margin-top: 3%;
+		}
+
+		.loan-img{
+			margin: 1% 0 0 6%;
+			padding: 5% 2% 0 7%;
+			width: 450px;
+		}
+
+		img{
+			width: 458px;
+			height: 295px;
+		}
+
+		img:hover{
+			cursor: pointer;
+			transform: scale(1.2);
+		}
+
+		@media screen and (max-width: 1100px){
+			body{
+				background-size: auto;
+			}
+
+			.loan{
+				display: flex;
+				flex-direction: column-reverse;
+			}
+
+			.loan-img{
+				padding-left: 20%;
+			}
+
+			.loan-options{
+				padding-right: 25%;
+				padding-top: 10%;
+			}
+
+			li{
+				display: flex;
+				justify-content: center;
+				width: 130%;
+				margin-top: 5%;
+			}
+
+		
+			
+			
+
+		}
+	</style>
+
+
+	<h2>Select the loan which you wish to apply for</h2>
+	<br>
+	<div class="loan">
+		<div class="loan-options">
+			<ul>
+				<li><p><a href="Loan">Click here to apply for educational Loan</a></p></li><br>
+				<li><p><a href="Loan">Click here to apply for marriage Loan</a></p></li><br>
+				<li><p><a href="Loan">Click here to apply for home Loan</a></p></li><br>
+				<li><p><a href="Loan">Click here to apply for gold Loan</a></p></li><br>
+				<li><p><a href="Loan">Click here to apply for car Loan</a></p></li><br>
+				<li><p><a href="Loan">Click here to apply for bike Loan</a></p></li>
+			</ul>
+		</div>
+
+		<div class="loan-img">
+			<img src="https://www.phillipcapital.in/assets/images/personal-loan-here-img.png" alt="loan-img"/>
+		</div>	
+    </div>
+	</body>
+	
+</html>

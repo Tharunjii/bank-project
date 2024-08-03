@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+</head>
+<body>
+
+	<style>
+		body{
+			margin: 0;
+			background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-d-illustration-of-a-blue-background-bank-building-featuring-spanish-text-image_3700313.jpg");
+			background-size: cover;
+		}
+
+		h1{
+			text-align: center;
+			margin:0;
+			font-size: 60px;
+			background-color: beige;
+			color: brown;
+			
+		}
+
+		h1:hover{
+			background-color: brown;
+			color:beige;
+		}
+
+		.hand-img{
+			display: flex;
+			flex-direction: row;
+			justify-items: flex-start;
+		}
+
+		img:hover{
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+		
+		a{
+			text-decoration: none;
+			color:black;
+			font-size: 25px;
+			font-weight: 600;
+			background-color: aqua;
+			padding: 3%;
+			width: max-content;
+			border: 2px solid black;
+			border-radius: 10px;
+		}
+
+		a:hover{
+			transform: scale(1.2);
+			color:aqua;
+			background-color: black;
+		}
+
+		.options{
+			display: flex;
+			flex-direction: column;
+			margin-left: 40%;
+		}
+
+		.home{
+			display: flex;
+			flex-direction: row;
+			padding: 0.5% 3%;
+			margin-top: 5%;
+		}
+
+		.button{
+			text-align: center;
+			margin-top: 30px;
+		}
+
+	
+
+		button{
+			padding: 5%;
+			width: 50%;
+			color:aqua;
+			background-color: black;
+		}
+
+		button:hover{
+			color:black;
+			background-color: aqua;
+			transform: scale(1.1);
+			font-size: 20px;
+		}
+
+		@media screen and (max-width:1000px){
+
+			body{
+				background-size: contain;
+			}
+			.hand-img{
+				display: none;
+			}
+
+			.home{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin-top: 30%;
+				margin-right: 22%;
+			}
+			
+			.options a{
+				margin-top: 8%;
+			}
+
+			.button{
+				display: flex;
+				justify-content: flex-start;
+			}
+		}
+	</style>
+	<h1>Welcome to your Account</h1>
+	<div class="home">
+		<div class="hand-img">
+			<img src="https://freepngimg.com/thumb/categories/1737.png" alt="hand_sign"/>
+		</div>
+
+	<div class="options">
+		<a class="ops-1" href="CheckBalance">Click here to check your balance</a><br><br>
+		<a class="ops-2" href="ChangePwd.html">Click here to change the password</a><br><br>
+		<a class="ops-3" href="Transfer.html">Click here to transfer amount</a><br><br>
+		<a class="ops-4" href="GetStatement">Click here to get statement</a><br><br>
+		<a class="ops-5" href="ApplyLoan.html">Click here to apply for loan</a>
+		<form action="Logout">
+			<div class="button">
+				<button>Logout</button>
+			</div>
+		</form>
+	</div>
+	<br>
+	</div>
+	
+</body>
+</html>

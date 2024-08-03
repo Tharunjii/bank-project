@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Passsword Change Page</title>
+</head>
+<body>
+	<style>
+		body{
+			background-image: url("https://www.shutterstock.com/image-vector/forgot-password-concept-forgotten-key-260nw-2127569978.jpg");
+			background-size: cover;
+		}
+
+		.changepwd{
+			display: flex;
+			justify-content: center;
+			margin-top: 16%;
+		}
+
+		.changepwd input{
+			padding: 5%;
+			width: 15rem;
+			margin-top: 6%;
+			background-color: #FFC7ED;
+		}
+
+		.changepwd input:hover{
+			border: 2px solid black;
+		}
+
+		.button input{
+			width:fit-content;
+			border-radius: 10px;
+		}
+
+		.button input:hover{
+			background-color: black;
+			color:#FFC7ED;
+			border: 1.5px solid #FFC7ED;
+			transform: scale(1.1);
+		}
+
+		.button{
+			display:flex;
+			justify-content: center;
+		}
+
+		label{
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-size: 28px;
+			color: #FFC7ED;
+			background-color: black;
+			padding: 2%;
+		}
+
+		@media screen and (max-width: 1000px){
+			body{
+				background-size: cover;
+			}
+
+			.changepwd{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 60%;
+			}
+			
+		}
+	</style>
+<div class="changepwd">
+	<form action="ChangePassword" onsubmit="return storeData()">
+		<p><label>New Password</label> <br><input type="password" id="pwd" name="npwd" /></p>
+		<p><label>Confirm Password</label> <br><input type="password" id="cnfpwd" name="cpwd" /></p>
+		<div class="button">
+			<input type="submit" />
+		</div>
+	</form>
+
+	<script>
+		function storeData(){
+			var pwd = document.getElementById("pwd").value;
+			var cnfpwd = document.getElementById("cnfpwd").value;
+
+
+			if(pwd.length < 6) {  
+				 alert("Password length must be atleast 6 characters");  
+    			 return false;  
+ 			}  
+			if(pwd!=cnfpwd){
+				alert("password doesn't match");
+				return false
+			}
+			else{
+				return true;
+			}
+		}
+	</script>
+</div>
+</body>
+</html>

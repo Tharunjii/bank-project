@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Page</title>
+</head>
+<body>
+	<style>
+		body{
+			background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-d-illustration-of-a-blue-background-bank-building-featuring-spanish-text-image_3700313.jpg");
+			background-size: cover;
+		}
+
+		h3{
+			margin-left: 5%;
+			font-size: 40px;
+			text-decoration: underline;
+			color: #481E14;
+		}
+
+		.reg-img{
+			width: 460px;
+		}
+
+		.registration{
+			display: flex;
+			flex-direction: row;
+		}
+
+		.form{
+			display: flex;
+			flex-direction: row;
+			margin-left: 25%;
+		}
+
+		.forms{
+			margin-top: 3%;
+		}
+
+		#forms-2{
+			margin-left: 35%;
+		}
+
+		.forms input{
+			border-radius: 10px;
+			padding: 5%;
+			width: 11rem;
+			background-color:bisque;
+			margin-top: 4%;
+		}
+
+		.forms input:hover{
+			border: 3px solid black;
+		}
+
+		label{
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			font-size: 25px;
+		}
+
+		.button input{
+			font-size: 20px;
+			width: 120px;
+			padding: 2%;
+			margin-left: 62%;
+			border-radius: 10px;
+			
+		}
+
+		.button input:hover{
+			color:aliceblue;
+			background-color: black;
+			border: 2px solid aliceblue;
+		}
+
+		.reg-img:hover{
+			transform: scale(1.1);
+		}
+
+
+		@media screen and (max-width: 1000px){
+
+			body{
+				background-size: contain;
+			}
+			.registration{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-right: 24%;
+				margin-top: 20%;
+			}
+
+			#img{
+				margin-left: 35%;
+			}
+
+			label{
+				font-size: 40px;
+			}
+			
+			.forms input{
+				padding: 7%;
+				width: 120%;
+			}
+ 
+			.button{
+				margin-right: 10%;
+			}
+		}
+		
+	</style>
+
+	
+<h3>Please key in your details...</h3>
+	<div class="registration">
+		<div id="img" >
+			<img  class="reg-img" src="https://cdn3d.iconscout.com/3d/premium/thumb/account-registration-form-3856341-3212566.png?f=webp"/>
+		</div>
+		<form action="Register" onsubmit="return storeData()">
+			<div class="form">
+				<div class="forms" id="forms-1">
+					<p><label>Name:</label> <input type="text" id="name" name="name" /></p><br>
+					 <p><label>CustId:</label> <input type="text" id="custid" name="custid" /></p><br>
+					 <p><label>Accno:</label> <input type="text" id="accno"  name="accno" /><br></p>
+				</div>
+				<div class="forms" id="forms-2">
+					 <p><label>Password:</label> <input type="password" id="pwd" name="pwd" /></p><br>
+					 <p><label>Balance:</label> <input type="text" id="bal" name="bal" /></p><br>
+					 <p><label>Email:</label> <input type="email" id="email" name="email" /></p><br>
+				</div>
+			</div><br>
+				<div class="button">
+					<input type="submit" />
+			 	</div>
+		</form>
+	</div>
+
+	<script>
+		function storeData(){
+			var Name = document.getElementById("name").value;
+			var nameCheck = /^[A-Z a-z]+$/;
+			var pwd = document.getElementById("pwd").value;
+			var pwdCheck = /^[A-Z a-z 0-9]+$/;
+			var custid = document.getElementById("custid").value;
+			var custidCheck = /^[A-Z a-z 0-9]+$/;
+			var accno = document.getElementById("accno").value;
+			var accnoCheck = /^[0-9]+$/;
+			var bal = document.getElementById("bal").value;
+			var balCheck = /^[0-9]+$/;
+			var email = document.getElementById("email").value;
+			var emailCheck = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+			if(!Name.match(nameCheck)){
+				alert("name is invalid")
+				return false;
+			}
+			if(pwd.length<6){
+				alert("password must contain atleast 6 characters")
+				return false
+			}
+			if(!pwd.match(pwdCheck)){
+				alert("password is invalid")
+				return false;
+			}
+			if(!custid.match(custidCheck)){
+				alert("custid is invlaid")
+				return false
+			}
+			if(accno.length<8){
+				alert("your accno must contain atleast 8 characters")
+				return false
+			}
+			if(!accno.match(accnoCheck)){
+				alert("accno is invalid")
+				return false;
+			}
+			if(!bal.match(balCheck)){
+				alert("bal is invalid")
+				return false;
+			}
+			if(!email.match(emailCheck)){
+				alert("email is invalid")
+				return false;
+			}
+			else{
+				return true;
+			}
+			
+		}
+	</script>
+</body>
+</html>

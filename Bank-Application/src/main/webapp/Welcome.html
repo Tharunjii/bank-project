@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome Page</title>
+</head>
+<body>
+	<style>
+		body{
+			margin:0%;
+			background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-d-illustration-of-a-blue-background-bank-building-featuring-spanish-text-image_3700313.jpg");
+			background-size: cover;
+		}
+		
+		.welcome_h1:hover{
+			color: bisque;
+		}
+
+		.welcome_h1{
+			color: black;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: 900;
+			text-align: center;
+			letter-spacing: 1px;
+			font-size: 50px;
+		}
+		.bank{
+			display: flex;
+			flex-direction: row;
+		}
+
+		.bank-logo{
+			margin: 80px;
+		}
+
+		.bank-logo:hover{
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+
+
+
+		.bank-user{
+			margin: 5%;
+			width: 500px;
+			height: 470px;
+			
+		}
+
+		.bank-user-inner{
+			display: flex;
+			flex-direction: column;
+			margin-top: 6%;
+			
+		}
+		.bank-user-inner a{
+			text-decoration: none;
+			color: black;
+			display: flex;
+			justify-content: center;
+			align-self: center;
+			padding: 6%;
+			font-weight: 700;
+			font-size: larger;
+		}
+
+		.register{
+			background-color: bisque;
+			margin: 5%;
+			padding: 5%;
+			border: 1.5px solid brown;
+			border-radius: 20px;
+			box-shadow: 5px 3px;
+		}
+
+		.login{
+			background-color: bisque;
+			margin: 5%;
+			padding: 5%;
+			border: 1.5px solid brown;
+			border-radius: 20px;
+			box-shadow: 5px 3px;
+		}
+
+		.register:hover{
+			transform: scale(1.1);
+		}
+
+		.login:hover{
+			transform: scale(1.1);
+		}
+
+		a:hover{
+			transform: scale(1.3);
+			color: brown;
+		}
+
+
+		@media screen and (max-width: 1000px){
+
+			body{
+				background-size: contain;
+			}
+			.bank{
+				display: flex;
+				flex-direction: column;
+				margin-top: 20%;
+				align-items: center;
+				font-size: 2rem;
+			}
+			
+
+			.bank-logo{
+				margin-top: 2%;
+			}
+
+			
+
+		}
+	</style>
+	
+	<div class="welcome">
+		<h1 class="welcome_h1">Welcome To ABC Bank</h1>
+	</div>
+	<div class="bank">
+		<div class="bank-user">
+			<div class="bank-user-inner">
+				<div class="register">
+					<a  href="Register.html">Click here to register</a>
+				</div>
+
+				<div class="login">
+					<a href="Login.html">Click here to Login</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="bank-logo"> 
+			<img id="img" src="https://png.pngtree.com/png-vector/20231211/ourmid/pngtree-bank-icon-circle-finance-png-image_10860575.png" alt="bank-logo"/>
+		</div>
+	</div>
+
+
+</body>
+</html>
